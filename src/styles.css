@@ -1,0 +1,32 @@
+body{
+    margin: 0;
+}
+nav{
+    padding: 1.5rem 3rem;
+    position: sticky;
+    display: flex;
+    justify-content: flex-end;
+    background-color: cornflowerblue;
+}
+nav>a{
+    margin-left: 2%;
+}
+.intro{
+    font-size: 7rem;
+    display: flex;
+    justify-content: center;
+}
+.name{
+    margin-top: 0.2em;
+}
+.role{
+    margin-top: 2.5em;
+}
+section{
+    padding: 2% 20%;
+    border: 2px solid red;
+}
+.section-title{
+    font-size: 4rem;
+    margin-bottom: 0;
+}
