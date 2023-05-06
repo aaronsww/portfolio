@@ -23,16 +23,23 @@ nav>a{
     margin-top: 2.5em;
 }
 section{
-    padding: 2% 20%;
+    padding: 2% 15%;
     border: 2px solid red;
 }
 .section-title{
     font-size: 4rem;
     margin-bottom: 0;
 }
+.project{
+    display: flex;
+}
 
-.img{
+.project-img{
    border-radius: 5px;
    border: 2px solid black;
    width: 600px;
+}
+
+.project-details{
+    border: 2px solid blue;
 }

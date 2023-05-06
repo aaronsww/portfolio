@@ -6,7 +6,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 export default function Home({ data }) {
   console.log(data);
 
-  const imageData = getImage(data.file.childImageSharp.gatsbyImageData);
+  // const imageData = getImage(data.file.childImageSharp.gatsbyImageData);
 
   return (
     <div>
@@ -47,11 +47,37 @@ export default function Home({ data }) {
 
         <section>
           <h1 className="section-title">Projects</h1>
-        
-            <GatsbyImage image={imageData} alt="CV Maker" className="img"/>
-         
+
+          {/* <div className="project">
+            <GatsbyImage
+              image={imageData}
+              alt="CV Maker"
+              className="project-img"
+            /> */}
+            <div className="project-details">
+              <h3>CV Maker</h3>
+              <p>
+                This project implementation allows users to create their own CV
+                with dynamic options based on a standard format.
+              </p>
+              <h4>Technologies</h4>
+              <p>React, Zustand, CSS</p>
+            </div>
+          {/* </div> */}
         </section>
       </main>
+      {data.allFile.nodes.map((node, index) => {
+        const imageData = getImage(node.childImageSharp.gatsbyImageData);
+        return (
+          <div key={index}  >
+            <GatsbyImage
+              image={imageData}
+              alt={`Project ${index + 1}`}
+              className="project-img"
+            />
+          </div>
+        );
+      })}
 
       <footer>
         <section>
@@ -64,11 +90,14 @@ export default function Home({ data }) {
 }
 
 export const query = graphql`
-  query Banner {
-    file(relativePath: { eq: "cvMaker.png" }) {
+  query MultipleImages {
+  allFile(filter: { sourceInstanceName: { eq: "images" }, extension: { eq: "png" } }) {
+    nodes {
+      relativePath
       childImageSharp {
         gatsbyImageData(layout: CONSTRAINED)
       }
     }
   }
+}
 `;
