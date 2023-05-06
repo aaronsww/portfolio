@@ -30,3 +30,9 @@ section{
     font-size: 4rem;
     margin-bottom: 0;
 }
+
+.img{
+   border-radius: 5px;
+   border: 2px solid black;
+   width: 600px;
+}

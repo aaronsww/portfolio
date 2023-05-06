@@ -1,7 +1,13 @@
 import * as React from "react";
 import "../styles.css";
+import { graphql } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-export default function Home() {
+export default function Home({ data }) {
+  console.log(data);
+
+  const imageData = getImage(data.file.childImageSharp.gatsbyImageData);
+
   return (
     <div>
       <header>
@@ -13,34 +19,56 @@ export default function Home() {
       </header>
 
       <main>
-        <h1>Jeevan Aaron</h1>
-        <h1>Web Developer</h1>
-
-        <section>
-          <h1>Projects</h1>
+        <section className="intro">
+          <div className="name">
+            <span>Jeevan </span>
+            <br></br>
+            <span>Aaron</span>
+          </div>
+          <p className="role">
+            Web <br></br> Developer
+          </p>
         </section>
 
-        <secion>
-          <h1> About</h1>
+        <section>
+          <h1 className="section-title"> About</h1>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
+            I'm a Front End Developer based out of Phoenix, Arizona. I love the
+            creative process of building visually appealing designs and
+            interactive user interfaces. I'm constantly seeking opportunities to
+            learn new concepts, technologies, and tools to create the best
+            possible user experience. Outside of coding, I'm an amateur rock
+            climber, a semi-professional pitcher of crumpled paper balls for my
+            cat Mango, and an avid reader of fantasy books.
           </p>
-          {/* Skill List */}
-        </secion>
+          {/* Call Github Api */}
+          {/* Skill List ???*/}
+        </section>
+
+        <section>
+          <h1 className="section-title">Projects</h1>
+        
+            <GatsbyImage image={imageData} alt="CV Maker" className="img"/>
+         
+        </section>
       </main>
-      {/* Call Github Api */}
+
       <footer>
-        <h1> Contact</h1>
-        <h2>Get in touch</h2>
+        <section>
+          <h1 className="section-title"> Contact</h1>
+          <h2>Get in touch</h2>
+        </section>
       </footer>
     </div>
   );
 }
+
+export const query = graphql`
+  query Banner {
+    file(relativePath: { eq: "cvMaker.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: CONSTRAINED)
+      }
+    }
+  }
+`;
