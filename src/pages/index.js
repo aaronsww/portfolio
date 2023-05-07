@@ -46,16 +46,16 @@ export default function Home({ data }) {
 
   return (
     <div>
-      <>
-        <VantaNetBackground />
-        <header>
-          <nav>
-            <a href="">Portfolio</a>
-            <a href="">About</a>
-            <a href="">Contact</a>
-          </nav>
-        </header>
+      <VantaNetBackground />
+      <header>
+        <nav>
+          <a href="#about">About</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
 
+      <main>
         <section className="intro">
           <div className="name">
             Jeevan
@@ -66,32 +66,30 @@ export default function Home({ data }) {
             Web <br></br> <span>Developer</span>
           </div>
         </section>
-      </>
-
-      <section>
-        <h1 className="section-title"> About</h1>
-        <p>
-          I'm a Front End Developer based out of Phoenix, Arizona. I love the
-          creative process of building visually appealing designs and
-          interactive user interfaces. I'm constantly seeking opportunities to
-          learn new concepts, technologies, and tools to create the best
-          possible user experience. Outside of coding, I'm an amateur rock
-          climber, a semi-professional pitcher of crumpled paper balls for my
-          cat Mango, and an avid reader of fantasy books.
-        </p>
-        {/* Call Github Api */}
-        {/* Skill List ???*/}
-      </section>
-
-      <section>
-        <h1 className="section-title">Projects</h1>
-        {projects.map((projectData, index) => {
-          return <Project key={index} data={projectData} />;
-        })}
-      </section>
+        <section id="about">
+          <h1 className="section-title"> About</h1>
+          <p>
+            I'm a Front End Developer based out of Phoenix, Arizona. I love the
+            creative process of building visually appealing designs and
+            interactive user interfaces. I'm constantly seeking opportunities to
+            learn new concepts, technologies, and tools to create the best
+            possible user experience. Outside of coding, I'm an amateur rock
+            climber, a semi-professional pitcher of crumpled paper balls for my
+            cat Mango, and an avid reader of fantasy books.
+          </p>
+          {/* Call Github Api */}
+          {/* Skill List ???*/}
+        </section>
+        <section id="portfolio">
+          <h1 className="section-title">Projects</h1>
+          {projects.map((projectData, index) => {
+            return <Project key={index} data={projectData} />;
+          })}
+        </section>
+      </main>
 
       <footer>
-        <section>
+        <section id="contact">
           <h1 className="section-title"> Contact</h1>
           <h2>Get in touch</h2>
         </section>
