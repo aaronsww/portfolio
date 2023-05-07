@@ -16,6 +16,7 @@ const VantaNetBackground = () => {
       color: 0xffffff,
       backgroundColor: 0x0,
       points: 20.0,
+      maxDistance: 17.00,
       spacing: 17.0,
       showDots: false,
     });
