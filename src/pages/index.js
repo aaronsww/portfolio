@@ -10,8 +10,8 @@ export default function Home({ data }) {
     {
       title: "Mini Message Board",
       summary:
-        "This project implementation allows users to create their own CV with dynamic options based on a standard format.",
-      tech: "React, Zustand, CSS",
+        "This full-stack web application allows users to view messages on a message board, and logged-in users can add messages to the board.",
+      tech: "Express, MongoDB, React, Node.js",
     },
     {
       title: "CV Maker",
@@ -22,8 +22,8 @@ export default function Home({ data }) {
     {
       title: "Shopping Cart",
       summary:
-        "This project implementation allows users to create their own CV with dynamic options based on a standard format.",
-      tech: "React, Zustand, CSS",
+        "This project is a virtual shopping cart that mirrors the functionality of a shopping e-commerce website where users can simulate the experience of shopping online from the comfort of their own device.",
+      tech: "React, React Router, Zustand, CSS",
     },
     {
       title: "Memory Card",
@@ -44,8 +44,6 @@ export default function Home({ data }) {
     tech: "React, Zustand, CSS",
   };
 
-  // const imageData = getImage(data.file.childImageSharp.gatsbyImageData);
-
   return (
     <div>
       <header>
@@ -59,13 +57,13 @@ export default function Home({ data }) {
       <main>
         <section className="intro">
           <div className="name">
-            <span>Jeevan </span>
+            Jeevan
             <br></br>
             <span>Aaron</span>
           </div>
-          <p className="role">
-            Web <br></br> Developer
-          </p>
+          <div className="role">
+            Web <br></br> <span>Developer</span>
+          </div>
         </section>
 
         <section>
@@ -85,9 +83,6 @@ export default function Home({ data }) {
 
         <section>
           <h1 className="section-title">Projects</h1>
-          {/* {data.allFile.nodes.map((node, index) => {
-            return <Project key={index} node={node} data={project} />;
-          })} */}
           {projects.map((projectData, index) => {
             return <Project key={index} data={projectData} />;
           })}

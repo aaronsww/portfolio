@@ -1,26 +1,38 @@
 body{
     margin: 0;
+    background-color: #121212; /* Dark background color */
+      color: #f0f0f0;
 }
 nav{
     padding: 1.5rem 3rem;
     position: sticky;
     display: flex;
     justify-content: flex-end;
-    background-color: cornflowerblue;
 }
 nav>a{
-    margin-left: 2%;
+    margin: 0 2% 0 3%;
 }
 .intro{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
     font-size: 7rem;
-    display: flex;
-    justify-content: center;
+    letter-spacing: -1px;  
+    line-height: 0.9;
+    height: 85vh;
 }
 .name{
-    margin-top: 0.2em;
+    margin-top: 5vh;
+}
+.name>span{
+     margin-left: 10%;
 }
 .role{
-    margin-top: 2.5em;
+    font-weight: 900;
+    margin-left: 18%;
+    margin-top: 3vh;
+}
+.role>span{
+    margin-left: 10%;
 }
 section{
     padding: 2% 15%;
@@ -42,4 +54,5 @@ section{
 
 .project-details{
     border: 2px solid blue;
+    width: 800px;
 }
