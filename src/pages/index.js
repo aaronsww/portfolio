@@ -1,8 +1,8 @@
 import * as React from "react";
 import "../styles.css";
 import { graphql } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Project from "../components/Project";
+import VantaNetBackground from "../components/VantaNetBackground";
 
 export default function Home({ data }) {
   console.log(data);
@@ -46,15 +46,16 @@ export default function Home({ data }) {
 
   return (
     <div>
-      <header>
-        <nav>
-          <a href="">Portfolio</a>
-          <a href="">About</a>
-          <a href="">Contact</a>
-        </nav>
-      </header>
+      <>
+        <VantaNetBackground />
+        <header>
+          <nav>
+            <a href="">Portfolio</a>
+            <a href="">About</a>
+            <a href="">Contact</a>
+          </nav>
+        </header>
 
-      <main>
         <section className="intro">
           <div className="name">
             Jeevan
@@ -65,29 +66,29 @@ export default function Home({ data }) {
             Web <br></br> <span>Developer</span>
           </div>
         </section>
+      </>
 
-        <section>
-          <h1 className="section-title"> About</h1>
-          <p>
-            I'm a Front End Developer based out of Phoenix, Arizona. I love the
-            creative process of building visually appealing designs and
-            interactive user interfaces. I'm constantly seeking opportunities to
-            learn new concepts, technologies, and tools to create the best
-            possible user experience. Outside of coding, I'm an amateur rock
-            climber, a semi-professional pitcher of crumpled paper balls for my
-            cat Mango, and an avid reader of fantasy books.
-          </p>
-          {/* Call Github Api */}
-          {/* Skill List ???*/}
-        </section>
+      <section>
+        <h1 className="section-title"> About</h1>
+        <p>
+          I'm a Front End Developer based out of Phoenix, Arizona. I love the
+          creative process of building visually appealing designs and
+          interactive user interfaces. I'm constantly seeking opportunities to
+          learn new concepts, technologies, and tools to create the best
+          possible user experience. Outside of coding, I'm an amateur rock
+          climber, a semi-professional pitcher of crumpled paper balls for my
+          cat Mango, and an avid reader of fantasy books.
+        </p>
+        {/* Call Github Api */}
+        {/* Skill List ???*/}
+      </section>
 
-        <section>
-          <h1 className="section-title">Projects</h1>
-          {projects.map((projectData, index) => {
-            return <Project key={index} data={projectData} />;
-          })}
-        </section>
-      </main>
+      <section>
+        <h1 className="section-title">Projects</h1>
+        {projects.map((projectData, index) => {
+          return <Project key={index} data={projectData} />;
+        })}
+      </section>
 
       <footer>
         <section>

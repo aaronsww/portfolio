@@ -1,16 +1,28 @@
 body{
     margin: 0;
     background-color: #121212; /* Dark background color */
-      color: #f0f0f0;
+    color: #f0f0f0;
+}
+.vanta-background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
 }
 nav{
     padding: 1.5rem 3rem;
     position: sticky;
     display: flex;
     justify-content: flex-end;
+    position: relative;  
+    z-index: 1;
 }
 nav>a{
     margin: 0 2% 0 3%;
+    text-decoration: none;
+    color: #f0f0f0;
 }
 .intro{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -19,6 +31,8 @@ nav>a{
     letter-spacing: -1px;  
     line-height: 0.9;
     height: 85vh;
+    position: relative; /* or absolute or fixed, depending on your layout */
+    z-index: 1;
 }
 .name{
     margin-top: 5vh;
