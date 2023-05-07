@@ -2,9 +2,47 @@ import * as React from "react";
 import "../styles.css";
 import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import Project from "../components/Project";
 
 export default function Home({ data }) {
   console.log(data);
+  const projectDetails = [
+    {
+      title: "Mini Message Board",
+      summary:
+        "This project implementation allows users to create their own CV with dynamic options based on a standard format.",
+      tech: "React, Zustand, CSS",
+    },
+    {
+      title: "CV Maker",
+      summary:
+        "This project implementation allows users to create their own CV with dynamic options based on a standard format.",
+      tech: "React, Zustand, CSS",
+    },
+    {
+      title: "Shopping Cart",
+      summary:
+        "This project implementation allows users to create their own CV with dynamic options based on a standard format.",
+      tech: "React, Zustand, CSS",
+    },
+    {
+      title: "Memory Card",
+      summary:
+        "This project implementation allows users to create their own CV with dynamic options based on a standard format.",
+      tech: "React, Zustand, CSS",
+    },
+  ];
+
+  const projects = data.allFile.nodes.map((node, index) => {
+    return { ...projectDetails[index], node };
+  });
+
+  const project = {
+    title: "CV Maker",
+    summary:
+      "This project implementation allows users to create their own CV with dynamic options based on a standard format.",
+    tech: "React, Zustand, CSS",
+  };
 
   // const imageData = getImage(data.file.childImageSharp.gatsbyImageData);
 
@@ -47,37 +85,14 @@ export default function Home({ data }) {
 
         <section>
           <h1 className="section-title">Projects</h1>
-
-          {/* <div className="project">
-            <GatsbyImage
-              image={imageData}
-              alt="CV Maker"
-              className="project-img"
-            /> */}
-            <div className="project-details">
-              <h3>CV Maker</h3>
-              <p>
-                This project implementation allows users to create their own CV
-                with dynamic options based on a standard format.
-              </p>
-              <h4>Technologies</h4>
-              <p>React, Zustand, CSS</p>
-            </div>
-          {/* </div> */}
+          {/* {data.allFile.nodes.map((node, index) => {
+            return <Project key={index} node={node} data={project} />;
+          })} */}
+          {projects.map((projectData, index) => {
+            return <Project key={index} data={projectData} />;
+          })}
         </section>
       </main>
-      {data.allFile.nodes.map((node, index) => {
-        const imageData = getImage(node.childImageSharp.gatsbyImageData);
-        return (
-          <div key={index}  >
-            <GatsbyImage
-              image={imageData}
-              alt={`Project ${index + 1}`}
-              className="project-img"
-            />
-          </div>
-        );
-      })}
 
       <footer>
         <section>
@@ -91,13 +106,16 @@ export default function Home({ data }) {
 
 export const query = graphql`
   query MultipleImages {
-  allFile(filter: { sourceInstanceName: { eq: "images" }, extension: { eq: "png" } }) {
-    nodes {
-      relativePath
-      childImageSharp {
-        gatsbyImageData(layout: CONSTRAINED)
+    allFile(
+      filter: { sourceInstanceName: { eq: "images" }, extension: { eq: "png" } }
+      sort: { fields: relativePath, order: ASC } # Add the sort argument here
+    ) {
+      nodes {
+        relativePath
+        childImageSharp {
+          gatsbyImageData(layout: CONSTRAINED)
+        }
       }
     }
   }
-}
 `;
