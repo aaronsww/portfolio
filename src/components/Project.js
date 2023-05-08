@@ -13,9 +13,11 @@ function Project({ data }) {
       />
       <div className="project-details">
         <h3>{data.title}</h3>
-        <p>{data.summary}</p>
-        <h4>Technologies</h4>
-        <p>{data.tech}</p>
+        <p>
+          <p>{data.summary}</p>
+          <h4>Technologies</h4>
+          <p>{data.tech}</p>
+        </p>
       </div>
     </div>
   );
