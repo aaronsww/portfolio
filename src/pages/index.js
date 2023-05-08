@@ -3,6 +3,7 @@ import "../styles.css";
 import { graphql } from "gatsby";
 import Project from "../components/Project";
 import VantaNetBackground from "../components/VantaNetBackground";
+import About from "../components/About";
 
 export default function Home({ data }) {
   console.log(data);
@@ -37,13 +38,6 @@ export default function Home({ data }) {
     return { ...projectDetails[index], node };
   });
 
-  const project = {
-    title: "CV Maker",
-    summary:
-      "This project implementation allows users to create their own CV with dynamic options based on a standard format.",
-    tech: "React, Zustand, CSS",
-  };
-
   return (
     <div>
       <VantaNetBackground />
@@ -66,22 +60,11 @@ export default function Home({ data }) {
             Web <br></br> <span>Developer</span>
           </div>
         </section>
-        <section id="about">
-          <h1 className="section-title"> About</h1>
-          <p>
-            I'm a Front End Developer based out of Phoenix, Arizona. I love the
-            creative process of building visually appealing designs and
-            interactive user interfaces. I'm constantly seeking opportunities to
-            learn new concepts, technologies, and tools to create the best
-            possible user experience. Outside of coding, I'm an amateur rock
-            climber, a semi-professional pitcher of crumpled paper balls for my
-            cat Mango, and an avid reader of fantasy books.
-          </p>
-          {/* Call Github Api */}
-          {/* Skill List ???*/}
-        </section>
+
+        <About />
+
         <section id="portfolio">
-          <h1 className="section-title">Projects</h1>
+          <h1 className="section-title">Portfolio</h1>
           {projects.map((projectData, index) => {
             return <Project key={index} data={projectData} />;
           })}
