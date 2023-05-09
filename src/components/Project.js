@@ -16,7 +16,7 @@ function Project({ data }) {
         <p>
           <p>{data.summary}</p>
           <h4>Technologies</h4>
-          <p>{data.tech}</p>
+          <div>{data.tech}</div>
         </p>
       </div>
     </div>
