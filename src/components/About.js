@@ -12,68 +12,130 @@ function About() {
         I love bringing creative ideas to life through fun side projects and
         actively contributing to the open source community.
         <br />
-        <Carousel>
-          <StaticImage
-            src="../images/icons/reactjs.svg"
-            alt="Tech 1"
-            className="tech-icon"
-          />
-          <StaticImage
-            src="../images/icons/tailwind-css.svg"
-            alt="Tech 1"
-            className="tech-icon"
-          />
-          <StaticImage
-            src="../images/icons/javascript.svg"
-            alt="Tech 1"
-            className="tech-icon"
-          />
-          <StaticImage
-            src="../images/icons/nodedotjs.svg"
-            alt="Tech 1"
-            className="tech-icon"
-          />
-          <StaticImage
-            src="../images/icons/mongo.svg"
-            alt="Tech 1"
-            className="tech-icon"
-          />
-          <StaticImage
-            src="../images/icons/express.svg"
-            alt="Tech 1"
-            className="tech-icon"
-          />
-          <StaticImage
-            src="../images/icons/git.svg"
-            alt="Tech 1"
-            className="tech-icon"
-          />
-          <StaticImage
-            src="../images/icons/gatsby.svg"
-            alt="Tech 1"
-            className="tech-icon"
-          />
-          <StaticImage
-            src="../images/icons/jest.svg"
-            alt="Tech 1"
-            className="tech-icon"
-          />
-          <StaticImage
-            src="../images/icons/npm.svg"
-            alt="Tech 1"
-            className="tech-icon"
-          />
-          <StaticImage
-            src="../images/icons/vite.svg"
-            alt="Tech 1"
-            className="tech-icon"
-          />
-          <StaticImage
-            src="../images/icons/webpack.svg"
-            alt="Tech 1"
-            className="tech-icon"
-          />
-        </Carousel>
+        <Carousel
+          items={[
+            {
+              image: (
+                <StaticImage
+                  src="../images/icons/reactjs.svg"
+                  alt="Tech 1"
+                  className="tech-icon"
+                />
+              ),
+              caption: "React",
+            },
+            {
+              image: (
+                <StaticImage
+                  src="../images/icons/tailwind-css.svg"
+                  alt="Tech 2"
+                  className="tech-icon"
+                />
+              ),
+              caption: "Tailwind",
+            },
+            {
+              image: (
+                <StaticImage
+                  src="../images/icons/javascript.svg"
+                  alt="Tech 1"
+                  className="tech-icon"
+                />
+              ),
+              caption: "JavaScript",
+            },
+            {
+              image: (
+                <StaticImage
+                  src="../images/icons/nodedotjs.svg"
+                  alt="Tech 1"
+                  className="tech-icon"
+                />
+              ),
+              caption: "NodeJS",
+            },
+            {
+              image: (
+                <StaticImage
+                  src="../images/icons/mongo.svg"
+                  alt="Tech 1"
+                  className="tech-icon"
+                />
+              ),
+              caption: "MongoDB",
+            },
+            {
+              image: (
+                <StaticImage
+                  src="../images/icons/express.svg"
+                  alt="Tech 1"
+                  className="tech-icon"
+                />
+              ),
+              caption: "ExpressJS",
+            },
+            {
+              image: (
+                <StaticImage
+                  src="../images/icons/git.svg"
+                  alt="Tech 1"
+                  className="tech-icon"
+                />
+              ),
+              caption: "Git",
+            },
+            {
+              image: (
+                <StaticImage
+                  src="../images/icons/gatsby.svg"
+                  alt="Tech 1"
+                  className="tech-icon"
+                />
+              ),
+              caption: "Gatsby",
+            },
+            {
+              image: (
+                <StaticImage
+                  src="../images/icons/jest.svg"
+                  alt="Tech 1"
+                  className="tech-icon"
+                />
+              ),
+              caption: "Jest",
+            },
+            {
+              image: (
+                <StaticImage
+                  src="../images/icons/npm.svg"
+                  alt="Tech 1"
+                  className="tech-icon"
+                />
+              ),
+              caption: "npm",
+            },
+            {
+              image: (
+                <StaticImage
+                  src="../images/icons/vite.svg"
+                  alt="Tech 1"
+                  className="tech-icon"
+                />
+              ),
+              caption: "Vite",
+            },
+            {
+              image: (
+                <StaticImage
+                  src="../images/icons/webpack.svg"
+                  alt="Tech 1"
+                  className="tech-icon"
+                />
+              ),
+              caption: "Webpack",
+            },
+          ]}
+        />
         <br />
         Outside of coding, I'm a huge cinephile with a deep appreciation for the
         art of filmmaking. My love for visual storytelling extends to my side
