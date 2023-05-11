@@ -3,6 +3,7 @@ import Carousel from "../components/Carousel";
 import { StaticImage } from "gatsby-plugin-image";
 
 function About() {
+  
   return (
     <section id="about">
       <h1 className="section-title"> About</h1>
