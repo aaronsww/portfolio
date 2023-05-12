@@ -66,7 +66,7 @@ export default function Home({ data }) {
         <section id="portfolio">
           <h1 className="section-title">Portfolio</h1>
           {projects.map((projectData, index) => {
-            return <Project key={index} data={projectData} />;
+            return <Project index={index} data={projectData} />;
           })}
         </section>
       </main>
@@ -74,7 +74,54 @@ export default function Home({ data }) {
       <footer>
         <section id="contact">
           <h1 className="section-title"> Contact</h1>
-          <h2>Get in touch</h2>
+          <a href="mailto:jeevan.aaron.joseph@gmail.com">
+            jeevan.aaron.joseph@gmail.com
+          </a>
+          <div className="links">
+            <span>
+              Jeevan Aaron
+              <br />© 2023
+            </span>
+            <span>
+              <b>Built With</b>
+              <br />
+              Gatsby, GraphQL
+            </span>
+            <span>
+              <a href="" className="links-with-arrow linked">
+                LinkedIn{" "}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  class="arrow"
+                >
+                  <path
+                    fill="#f0f0f0"
+                    d="M6.4 18L5 16.6L14.6 7H6V5h12v12h-2V8.4L6.4 18Z"
+                  />
+                </svg>
+              </a>
+
+              <br />
+              <a href="" className="links-with-arrow github">
+                Github{" "}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  class="arrow"
+                >
+                  <path
+                    fill="#f0f0f0"
+                    d="M6.4 18L5 16.6L14.6 7H6V5h12v12h-2V8.4L6.4 18Z"
+                  />
+                </svg>
+              </a>
+            </span>
+          </div>
         </section>
       </footer>
     </div>
