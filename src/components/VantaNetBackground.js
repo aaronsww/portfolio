@@ -14,7 +14,7 @@ const VantaNetBackground = () => {
       scale: 1.0,
       scaleMobile: 1.0,
       color: 0xffffff,
-      backgroundColor: 0x0,
+      backgroundColor: 0x121212,
       points: 20.0,
       maxDistance: 17.0,
       spacing: 17.0,

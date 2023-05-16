@@ -19,6 +19,7 @@ function Project({ data, index }) {
         <h3>{data.title}</h3>
         <div>
           <p>{data.summary}</p>
+          <hr className="separator" />
           <h4>Technologies</h4>
           <div>{data.tech}</div>
         </div>

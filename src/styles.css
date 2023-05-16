@@ -62,7 +62,6 @@ nav>a{
 }
 section{
     padding: 2% 15%;
-    /* border: 2px solid red; */
 }
 .section-title{
     font-size: 3rem;
@@ -92,8 +91,8 @@ section{
     align-items: center;
     padding: 1rem;
     margin-left: 1rem;
-    border: 2px solid white;
-    background-color: grey;
+    border: 2px dotted white;
+    background-color: #343434;
 }
 .carousel-caption {
     margin-top: 5px;
@@ -140,8 +139,9 @@ section{
 .project-details{
     padding: 0 3%;
     font-size: 1.2em;
-    background-color: darkgrey;
+    background-color: #232323;
     color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }   
 .project-details.even{
     grid-row: 2/3;
@@ -157,8 +157,9 @@ section{
     display: inline;
     margin-left: 1em;
     padding: .5rem 1rem;
-    background: lavender;
+    background: #7a7a7a;
     color: black;
+    box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.3);
 }
 
 .project-details>div{
@@ -167,7 +168,7 @@ section{
  
 .project-details h4{
     margin: 0;
-    margin-top: 2rem;
+    margin-top: 1rem;
      
 }
 
@@ -186,13 +187,18 @@ section{
 #contact>a{
     font-size: 3rem;
     text-decoration: none;
-    color: grey;
+    color: #7a7a7a;
+    transition: text-shadow 0.3s ease-in-out;
 }
+
+#contact > a:hover {
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+  }
            
 .links{
     display: flex;
     justify-content: space-between;
-    margin-top: 20%;
+    margin-top: 10%;
     font-size: 1.5em;
     margin-bottom: 5rem;
 }
