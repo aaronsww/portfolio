@@ -33,7 +33,11 @@ nav>a{
     text-decoration: none;
     color: #f0f0f0;
     font-size: 18px;
+    transition: box-shadow 0.3s ease-in-out;
 }
+nav > a:hover {
+    text-shadow: 0 0 8px rgba(240, 240, 240, 0.7);
+  }
 .intro{
     text-transform: uppercase;
     font-size: 7rem;
