@@ -38,6 +38,16 @@ nav>a{
 nav > a:hover {
     text-shadow: 0 0 8px rgba(240, 240, 240, 0.7);
   }
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+  
 .intro{
     text-transform: uppercase;
     font-size: 7rem;
@@ -46,6 +56,7 @@ nav > a:hover {
     position: relative; /* or absolute or fixed, depending on your layout */
     z-index: 1;
     font-family: 'Sora', sans-serif;
+     animation: fadeIn 1s ease-in;
 }
 .name{
     margin-top: 5vh; 
