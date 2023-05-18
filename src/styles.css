@@ -61,7 +61,7 @@ nav > a:hover {
 .name{
     margin-top: 5vh; 
     font-weight: 400;   
-     /* font-family: 'Roboto', sans-serif; */
+     font-family: 'Roboto', sans-serif;
   
 }
 .name>span{

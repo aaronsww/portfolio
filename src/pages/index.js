@@ -4,6 +4,7 @@ import { graphql } from "gatsby";
 import Project from "../components/Project";
 import VantaNetBackground from "../components/VantaNetBackground";
 import About from "../components/About";
+import { Helmet } from "react-helmet";
 
 export default function Home({ data }) {
   console.log(data);
@@ -48,6 +49,9 @@ export default function Home({ data }) {
 
   return (
     <div>
+      <Helmet>
+        <title>Jeevan Aaron</title>
+      </Helmet>
       <VantaNetBackground />
       <header>
         <nav>
