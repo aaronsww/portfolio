@@ -24,7 +24,7 @@ function Project({ data, index }) {
           <div>{data.tech}</div>
         </div>
         <div className="project-links">
-          <a href="" className="links-with-arrow">
+          <a href={data.liveLink} className="links-with-arrow">
             Live Preview
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +39,7 @@ function Project({ data, index }) {
               />
             </svg>
           </a>
-          <a href="" className="project-links links-with-arrow">
+          <a href={data.codeLink} className="project-links links-with-arrow">
             View Code
             <svg
               xmlns="http://www.w3.org/2000/svg"

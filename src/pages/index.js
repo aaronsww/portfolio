@@ -13,24 +13,32 @@ export default function Home({ data }) {
       summary:
         "A personalized movie recommendation system that takes into account the user's emotional state and generates movie suggestions that can help them cope with their emotions.",
       tech: "Express.js, MongoDB, React, Node.js, OpenAPI GPT-3",
+      liveLink: "https://github.com/your-username/non-existent-repo",
+      codeLink: "https://github.com/aaronsww/film-therapy-assistant"
     },
     {
       title: "Mini Message Board",
       summary:
         "This full-stack web application allows users to view messages on a message board, and logged-in users can add messages to the board.",
       tech: "Express.js, MongoDB, React, Node.js",
+      liveLink: "https://github.com/your-username/non-existent-repo",
+      codeLink: "https://github.com/aaronsww/message-board"
     },
     {
       title: "CV Maker",
       summary:
         "This project implementation allows users to create their own CV with dynamic options based on a standard format.",
       tech: "React, Zustand, CSS",
+      liveLink: "https://cv-application-three.vercel.app/",
+      codeLink: "https://github.com/aaronsww/cv-application"
     },
     {
       title: "Shopping Cart",
       summary:
         "This project is a virtual shopping cart that mirrors the functionality of a shopping e-commerce website where users can simulate the experience of shopping online from the comfort of their own device.",
       tech: "React, React Router, Zustand, RESTful API, Tailwind CSS",
+      liveLink: "https://shopping-cart-six-blue.vercel.app/",
+      codeLink: "https://github.com/aaronsww/shopping-cart"
     },
   ];
 
