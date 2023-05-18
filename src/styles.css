@@ -56,7 +56,7 @@ nav > a:hover {
     position: relative; /* or absolute or fixed, depending on your layout */
     z-index: 1;
     font-family: 'Sora', sans-serif;
-     animation: fadeIn 1s ease-in;
+    animation: fadeIn 1s ease-in;
 }
 .name{
     margin-top: 5vh; 
@@ -65,15 +65,15 @@ nav > a:hover {
   
 }
 .name>span{
-     margin-left: 10%;
+     margin-left: 7vw;
 }
 .role{
     font-weight: 700;
-    margin-left: 18%;
+    margin-left: 12vw;
     margin-top: 3vh;
 }
 .role>span{
-    margin-left: 10%;
+    margin-left: 7vw;
 }
 section{
     padding: 2% 15%;
@@ -190,13 +190,19 @@ section{
 .project-links{
     display: flex;
     justify-content: flex-end;
-   align-items: center;
-   padding-bottom: 0.5rem;
+    align-items: center;
+    padding-bottom: 0.5rem;
+    padding-top: 1rem;
     text-decoration: none;
 }
+/* .project-links>a{
+    color: #7a7a7a;
+} */
+
 
 .project-links a:first-child{
     margin-right: 3rem;
+    
 }
 
 #contact>a{
@@ -237,4 +243,80 @@ section{
 .github{
     margin-top: -1.5rem;
     margin-left: -1rem;
+}
+
+@media (max-width: 1200px) {
+  
+  .role {
+    margin-left: 5vw;  
+  }
+
+  .name > span{
+    margin-left: 2vw; 
+  }
+  .role > span {
+    margin-left: 5vw;  
+  }
+}
+
+@media (max-width: 1050px) {
+  .name{
+    font-size: 6rem; 
+    margin-left: 3vw; 
+  }
+  .role {
+    font-size: 6rem; 
+    margin-left: 7vw; 
+  }
+
+  .name > span,
+  .role > span {
+    margin-left: 5vw;  
+  }
+   section{
+    padding: 2% 6%;
+}
+}
+
+@media (max-width: 746px) {
+  .name{
+    font-size: 3.5rem; 
+    margin-left: 1vw; 
+  }
+  .role {
+    font-size: 3.5rem; 
+    margin-left: 3vw; 
+  }
+
+  .name > span,
+  .role > span {
+    margin-left: 2vw;  
+     font-size: 3.5rem; 
+  }
+section{
+    padding: 2% 8%;
+}
+nav>a{
+    font-size: 1rem;
+}
+.section-title{
+    font-size: 2rem;
+}
+.about{
+    font-size: 1.2rem;
+}
+.tech-icon {
+    width: 30px;
+    height: auto;
+}
+.project{
+    display: block;
+}
+ 
+#contact>a{
+    font-size: 1.5rem;
+}
+.links{
+    font-size: 1rem;
+}
 }
