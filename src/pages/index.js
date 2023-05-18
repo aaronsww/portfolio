@@ -9,10 +9,16 @@ export default function Home({ data }) {
   console.log(data);
   const projectDetails = [
     {
+      title: "Film Therapy Assistant",
+      summary:
+        "A personalized movie recommendation system that takes into account the user's emotional state and generates movie suggestions that can help them cope with their emotions.",
+      tech: "Express.js, MongoDB, React, Node.js, OpenAPI GPT-3",
+    },
+    {
       title: "Mini Message Board",
       summary:
         "This full-stack web application allows users to view messages on a message board, and logged-in users can add messages to the board.",
-      tech: "Express, MongoDB, React, Node.js",
+      tech: "Express.js, MongoDB, React, Node.js",
     },
     {
       title: "CV Maker",
@@ -24,13 +30,7 @@ export default function Home({ data }) {
       title: "Shopping Cart",
       summary:
         "This project is a virtual shopping cart that mirrors the functionality of a shopping e-commerce website where users can simulate the experience of shopping online from the comfort of their own device.",
-      tech: "React, React Router, Zustand, CSS",
-    },
-    {
-      title: "Memory Card",
-      summary:
-        "This project implementation allows users to create their own CV with dynamic options based on a standard format.",
-      tech: "React, Zustand, CSS",
+      tech: "React, React Router, Zustand, RESTful API, Tailwind CSS",
     },
   ];
 
