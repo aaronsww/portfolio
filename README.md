@@ -1,4 +1,4 @@
-# Jeevan Aaron's Portfolio
+# Portfolio Website
 
 The portfolio website is deployed and can be accessed at <a href="https://jeevanaaron.netlify.app/">https://jeevanaaron.netlify.app</a>
 
