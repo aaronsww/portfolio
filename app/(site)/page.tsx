@@ -1,5 +1,5 @@
 import Hero from "../components/Hero";
-// import StatsMarquee from "../components/StatsMarquee";
+import StatsMarquee from "../components/StatsMarquee";
 import About from "../components/About";
 import JournalTeaser from "../components/JournalTeaser";
 import Projects from "../components/Projects";
@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      {/* <StatsMarquee /> */}
+      <StatsMarquee />
       <About />
       <JournalTeaser />
       <Projects />
