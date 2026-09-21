@@ -43,10 +43,10 @@ export default function Hero() {
         transition={{ duration: 0.6, ease }}
         className="mb-6 font-mono text-xs tracking-widest text-[var(--muted)] uppercase"
       >
-        Engineer &middot; Artist &middot; Explorer
+        Engineer &middot; Artist &middot; Inspired
       </motion.p>
 
-      <h1 className="font-[family-name:var(--font-display)] text-[clamp(3.5rem,11.25vw,18rem)] leading-[0.85] tracking-tight">
+      <h1 className="font-[family-name:var(--font-display)] text-[clamp(4.25rem,13vw,18rem)] leading-[0.85] tracking-tight">
         <AnimatedWord word="Jeevan" startIndex={0} />
         <div className="text-[var(--muted)]">
           <AnimatedWord word="Aaron" startIndex={6} />
